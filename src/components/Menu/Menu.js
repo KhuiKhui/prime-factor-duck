@@ -6,6 +6,7 @@ export default function Menu(){
 
     const dispatch = useDispatch();
     const number = useSelector(state => state["number"]);
+    const clicked = useSelector(state => state["clicked"]);
     //const factors = useSelector(state => state["factors"]);
     var storage = number;
 
@@ -13,9 +14,12 @@ export default function Menu(){
 
         dispatch(slice.actions.clearFactors());
         dispatch(slice.actions.setNumber(e.target.value));
+        
     }
 
-    function prime_fact(){
+    function prime_fact(e){
+        dispatch(slice.actions.clearFactors());
+        dispatch(slice.actions.setBool());
         storage = number;
 
         while (storage % 2 == 0){
@@ -34,7 +38,7 @@ export default function Menu(){
             dispatch(slice.actions.addFactors(storage));
         }
         
-        dispatch(slice.actions.setNumber(storage));
+        //dispatch(slice.actions.setNumber(storage));
         dispatch(slice.actions.sortFactors());
     }
 
