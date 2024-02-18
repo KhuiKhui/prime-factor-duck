@@ -1,0 +1,17 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.duck{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.prophecy{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    font-family:'Courier New', Courier, monospace;
+}

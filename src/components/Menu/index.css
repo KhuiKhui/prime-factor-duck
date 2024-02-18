@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu{
+    display: flex;
+    height: 100vh;
+    width: 400px;
+    background-color: gainsboro;
+    float: right;
+    flex-direction: column;
+}
+
+.numInp{
+    width: 378px;
+    padding: 5px;
+    margin: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.duckButton{
+    width: 390px;
+    height: 50px;
+    padding: 5px;
+    margin: 5px;
+    position: relative;
+    top: 20%;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+}
