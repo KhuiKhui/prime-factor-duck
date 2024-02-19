@@ -9,19 +9,21 @@ export default function Duck(){
     const dispatch = useDispatch();
     const factors = useSelector(state => state["factors"])
     const number = useSelector(state => state["number"])
+    const clicked = useSelector(state => state["clicked"])
     const dialogue = useSelector(state => state["dialogue"])
     useEffect(() => {
         dispatch(slice.actions.chooseDia());
-    }, [number])
+    }, [clicked])
     
 
     console.log(factors)
     return <>
+    <div className='heading'>The Prophecies of Sir P.Facto</div>
     <div className='duck'>
         <img src={duck_png} alt='Logo'/>
         
     </div>
-    <div className='prophecy'>{dialogue}</div>
+    <div className='prophecy'>{number == null ? `I'm listening.` : `${dialogue}`}</div>
 
     <div className='prophecy'>{number != null ? `The prime factors of ${number} is: ${factors.join(' . ')}` : ``}</div>
 

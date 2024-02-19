@@ -10,13 +10,17 @@ export const slice = createSlice({
         factors: [],
         dialogue: "",
         dialogueList: [
-            "Such trivial questions... It is clear that:",
+            "What a trivial question... It is clear that:",
             "Are you underestimating me, mortal? Your answer is as follows:",
-            "Hmp... This is clear as day:",
+            "Hmph... This is clear as day:",
             "Waste of my time. Here's the answer, now shoo:",
             "How do you not know this?",
             "You dare stand before ME to ask this elementary question?",
-            "Of course I know the answer. Who do you think I am?"
+            "Of course I know the answer. Who do you think I am?",
+            "Give me a harder one.",
+            "Are you kidding me?",
+            "Even one of my ducklings can solve this.",
+            
         ],
     },
     reducers: {
@@ -42,7 +46,7 @@ export const slice = createSlice({
             state["factors"].sort();
         },
         chooseDia: (state, action) => {
-            state["dialogue"] = state["dialogueList"][Math.floor(Math.random() * 10)];
+            state["dialogue"] = state["dialogueList"][Math.floor(Math.random() * (state["dialogueList"].length - 1))];
         },
     }
 })

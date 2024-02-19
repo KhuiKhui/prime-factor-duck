@@ -13,11 +13,20 @@ export default function Menu(){
     function handleChange(e){
 
         dispatch(slice.actions.clearFactors());
-        dispatch(slice.actions.setNumber(e.target.value));
+        if (e.target.value == ""){
+            dispatch(slice.actions.setNumber(null));
+        }
+        else{
+            dispatch(slice.actions.setNumber(e.target.value));
+        }
+        
         
     }
 
     function prime_fact(e){
+        if (number == null || number == null){
+            return
+        }
         dispatch(slice.actions.clearFactors());
         dispatch(slice.actions.setBool());
         storage = number;
@@ -28,7 +37,7 @@ export default function Menu(){
         }
 
         for (let i = 3; i <= Math.sqrt(number); i = i + 2){
-            if (storage % i == 0){
+            while (storage % i == 0){
                 dispatch(slice.actions.addFactors(i));
                 storage /= i;
             }
