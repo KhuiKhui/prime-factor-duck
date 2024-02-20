@@ -7,28 +7,36 @@ export default function Menu(){
     const dispatch = useDispatch();
     const number = useSelector(state => state["number"]);
     const clicked = useSelector(state => state["clicked"]);
-    //const factors = useSelector(state => state["factors"]);
+    
+    const regex = /\D/
     var storage = number;
 
     function handleChange(e){
-
+        e.target.value = e.target.value.replace(regex, '')
+        dispatch(slice.actions.setBool(false));
         dispatch(slice.actions.clearFactors());
         if (e.target.value == ""){
             dispatch(slice.actions.setNumber(null));
         }
         else{
+
             dispatch(slice.actions.setNumber(e.target.value));
         }
-        
-        
     }
 
     function prime_fact(e){
         if (number == null || number == null){
             return
         }
+        dispatch(slice.actions.setBool(true));
+        if (number <= 1){
+            dispatch(slice.actions.clearFactors());
+            dispatch(slice.actions.addFactors("None"));
+            return
+        }
+        
         dispatch(slice.actions.clearFactors());
-        dispatch(slice.actions.setBool());
+        
         storage = number;
 
         while (storage % 2 == 0){
@@ -47,16 +55,16 @@ export default function Menu(){
             dispatch(slice.actions.addFactors(storage));
         }
         
-        //dispatch(slice.actions.setNumber(storage));
-        dispatch(slice.actions.sortFactors());
+
     }
 
     return <>
         <div className="menu">
             <input className='numInp' placeholder="Enter number" onChange={handleChange}></input>
-            <button className='duckButton' onClick={prime_fact}>Ask the Duck</button>
-
+            <button className='duckButton' onClick={prime_fact}>Ask Sir P.Facto</button>
+            
         </div>
+        <div className='credit'>Made by Khuat Dang Khoi</div>
 
     </>
 }

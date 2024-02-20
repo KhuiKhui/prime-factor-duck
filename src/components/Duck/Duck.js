@@ -11,6 +11,7 @@ export default function Duck(){
     const number = useSelector(state => state["number"])
     const clicked = useSelector(state => state["clicked"])
     const dialogue = useSelector(state => state["dialogue"])
+    
     useEffect(() => {
         dispatch(slice.actions.chooseDia());
     }, [clicked])
@@ -23,9 +24,10 @@ export default function Duck(){
         <img src={duck_png} alt='Logo'/>
         
     </div>
-    <div className='prophecy'>{number == null ? `I'm listening.` : `${dialogue}`}</div>
+    <div className='prophecy'>{clicked ? `${dialogue}` : `I'm listening.`}</div>
+    <br></br>
 
-    <div className='prophecy'>{number != null ? `The prime factors of ${number} is: ${factors.join(' . ')}` : ``}</div>
+    <div className='prophecy'>{clicked ? `The prime factors of ${number} are: ${factors.join(' . ')}` : ``}</div>
 
     </>
 }
