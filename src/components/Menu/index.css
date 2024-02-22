@@ -28,7 +28,7 @@
     padding: 5px;
     margin: 5px;
     position: relative;
-    top: 20%;
+    top: 10%;
     font-family:'Courier New', Courier, monospace;
     font-weight: bold;
 }
@@ -39,4 +39,14 @@
     justify-content: left;
     font-family:'Courier New', Courier, monospace;
     font-size: x-small;
+}
+
+.desc{
+    display: flex;
+    white-space: pre-line;
+    padding: 5px;
+    margin: 5px;
+    font-family:'Courier New', Courier, monospace;
+    font-size: medium;
+    font-weight: bold;
 }

@@ -61,6 +61,11 @@ export default function Menu(){
     return <>
         <div className="menu">
             <input className='numInp' placeholder="Enter number" onChange={handleChange}></input>
+            <br></br>
+            <div className='desc'>This is Primordial Facto the Omnipotent Waterfowl.</div>
+            <div className='desc'>Referred by many as Sir P.Facto.</div>
+            <div className='desc'>Enter a natural, non-negative number, and He will bless you with its prime factors.</div>
+
             <button className='duckButton' onClick={prime_fact}>Ask Sir P.Facto</button>
             
         </div>
