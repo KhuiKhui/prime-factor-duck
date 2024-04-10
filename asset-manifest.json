@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.459d7104.css",
-    "main.js": "/react-gh-pages/static/js/main.c815c35c.js",
-    "static/js/592.0102a40c.chunk.js": "/react-gh-pages/static/js/592.0102a40c.chunk.js",
-    "static/media/duck_png.png": "/react-gh-pages/static/media/duck_png.eb9ee92a004b3c2d5e00.png",
-    "static/media/logo.svg": "/react-gh-pages/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/react-gh-pages/index.html",
-    "main.459d7104.css.map": "/react-gh-pages/static/css/main.459d7104.css.map",
-    "main.c815c35c.js.map": "/react-gh-pages/static/js/main.c815c35c.js.map",
-    "592.0102a40c.chunk.js.map": "/react-gh-pages/static/js/592.0102a40c.chunk.js.map"
+    "main.css": "/prime-factor-duck/static/css/main.459d7104.css",
+    "main.js": "/prime-factor-duck/static/js/main.ca0e5d44.js",
+    "static/js/592.0102a40c.chunk.js": "/prime-factor-duck/static/js/592.0102a40c.chunk.js",
+    "static/media/duck_png.png": "/prime-factor-duck/static/media/duck_png.eb9ee92a004b3c2d5e00.png",
+    "static/media/logo.svg": "/prime-factor-duck/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/prime-factor-duck/index.html",
+    "main.459d7104.css.map": "/prime-factor-duck/static/css/main.459d7104.css.map",
+    "main.ca0e5d44.js.map": "/prime-factor-duck/static/js/main.ca0e5d44.js.map",
+    "592.0102a40c.chunk.js.map": "/prime-factor-duck/static/js/592.0102a40c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.459d7104.css",
-    "static/js/main.c815c35c.js"
+    "static/js/main.ca0e5d44.js"
   ]
 }
